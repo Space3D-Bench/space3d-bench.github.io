@@ -172,7 +172,8 @@
         <h2 class="title is-3">Benchmark</h2>
         <div class="content has-text-justified">
           <p>
-           <b>Dataset.</b> This Q&A dataset is based on thirteen scenes part of the Replica dataset: five multi-room scenes - a 2-floor house <i>(apartment 0)</i>, two multi-room apartments <i>(apartment 1, 2)</i>, two different setups of the FRL apartment <i>(FRL apartment 0, 1)</i>; and eight single-room scenes - three apartment rooms <i>(room 0, 1, 2)</i>, a hotel room <i>(hotel 0)</i>, and four office rooms <i>(office 0, 2, 3, 4)</i>. We manually constructed 1000 questions with answers: 100 for all multi-room scenes, 60 for apartment rooms and two offices, and 50 for the remaining two offices. The answers may have one of the two forms: ground truth information for factual data, such as the number of objects in a room, or an illustrative image of the objects/rooms of interest for questions that involve descriptions or identifying similarities. This distinction allows to not penalize the answering system's creativity.
+            <b>Dataset</b><br>
+            This Q&A dataset is based on thirteen scenes part of the <a href="https://github.com/facebookresearch/Replica-Dataset">Replica dataset</a>: five multi-room scenes - a 2-floor house <i>(apartment 0)</i>, two multi-room apartments <i>(apartment 1, 2)</i>, two different setups of the FRL apartment <i>(FRL apartment 0, 1)</i>; and eight single-room scenes - three apartment rooms <i>(room 0, 1, 2)</i>, a hotel room <i>(hotel 0)</i>, and four office rooms <i>(office 0, 2, 3, 4)</i>. We manually constructed 1000 questions with answers: 100 for all multi-room scenes, 60 for apartment rooms and two offices, and 50 for the remaining two offices. The answers may have one of the two forms: ground truth information for factual data, such as the number of objects in a room, or an illustrative image of the objects/rooms of interest for questions that involve descriptions or identifying similarities. This distinction allows to not penalize the answering system's creativity. The questions were divided into 6 categories, adjusted for indoor spaces from the <a href="https://proceedings.esri.com/library/userconf/proc18/tech-workshops/tw_1593-380.pdf">spatial taxonomy for GIS applications</a>: object location, measurements, pattern identification, navigation, spatial relationships, and predictions.
           </p>
         </div>
       </div>
@@ -180,17 +181,17 @@
     <div style="text-align: center;">
       <div style="display: flex; justify-content: center; gap: 10px;">
         <div>
-          <img src="static/images/sunburst.png" alt="Image 1" style="max-width: 70%;">
+          <img src="static/images/sunburst.png" alt="Sunburst chart" style="max-width: 70%;">
           <p><i>a) Question distribution based on their first three words</i></p>
         </div>
         <div>
-          <img src="static/images/question_distribution.png" alt="Image 2" style="max-width: 67%;">
+          <img src="static/images/question_distribution.png" alt="Distribution of questions wrt categories" style="max-width: 84%;">
           <p><i>b) Question distribution based on their categories</i></p>
         </div>
       </div>
       <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
         <div>
-          <img src="static/images/question_lengths.png" alt="Image 3" style="max-width: 90%;">
+          <img src="static/images/question_lengths.png" alt="Question distribution wrt lengths" style="max-width: 90%;">
           <p><i>c) Question distribution based on their lengths</i></p>
         </div>
       </div>
@@ -200,16 +201,14 @@
     <br><br>
         <div class="content has-text-justified">
           <p>
-           <b>Automatic assessment</b>
-            (a) The distribution of instructions based on the first word, where the inner circle of the graph represents the frequency of the first word’s occurrence, and the outer circle shows the frequency of verbs and nouns appearing in the instructions corresponding to that first word. 
-            (b) The word cloud of responses. 
-            (c) The distribution of instruction length. (d) The distribution of response length
+           <b>Automatic assessment</b><br>
+           The goal of the automatic assessment is to evaluate the responses from an answering system with respect to the actual state of the corresponding scene in the dataset. The assessment is performed by using LLMs from the GPT4 family as state-of-the-art. We divided the assessment into two cases: <i>Ground Truth Check</i> - when the ground truth is indisputable (e.g. number of objects in the room), <i>Answer Cross-check</i> - when the definition of the ground truth would either need to exceed context length or would unnecessarily limit the answering system's creativity (e.g. finding similarities between rooms). In both scenarios, an LLM is provided with the question, the system's answer, and the acceptance criterion, which varies based on the question type. In the case of the <i>Ground Truth Check</i>, the message to the LLM is extended with information on the actual state of the scene with respect to the given question. <i>Answer Cross-check</i>, however, provides an image presenting the corresponding scene(s) in question, accompanied by an example answer. This way, a VLM can decide whether the actual system's answer matches the reality, and not necessarily matching the example, reducing the bias of the assessment system. Then, a language model makes a decision and outputs two components: the acceptance/rejection decision, and its justification, which gives the user of the dataset an insight on what can be addressed in the next iterations of their solution.
           </p>
 
         </div>
     <centering>
       <div style="text-align: center;">
-        <img id="pipeline" style="max-width: 100%;" src="static/images/statistics.png">
+        <img id="pipeline" style="max-width: 100%;" src="static/images/assessment.png">
       </div>
     </centering>
   
