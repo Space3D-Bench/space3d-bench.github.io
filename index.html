@@ -202,16 +202,45 @@
         <div class="content has-text-justified">
           <p>
            <b>Automatic assessment</b><br>
-           The goal of the automatic assessment is to evaluate the responses from an answering system with respect to the actual state of the corresponding scene in the dataset. The assessment is performed by using LLMs from the GPT4 family as state-of-the-art. We divided the assessment into two cases: <i>Ground Truth Check</i> - when the ground truth is indisputable (e.g. number of objects in the room), <i>Answer Cross-check</i> - when the definition of the ground truth would either need to exceed context length or would unnecessarily limit the answering system's creativity (e.g. finding similarities between rooms). In both scenarios, an LLM is provided with the question, the system's answer, and the acceptance criterion, which varies based on the question type. In the case of the <i>Ground Truth Check</i>, the message to the LLM is extended with information on the actual state of the scene with respect to the given question. <i>Answer Cross-check</i>, however, provides an image presenting the corresponding scene(s) in question, accompanied by an example answer. This way, a VLM can decide whether the actual system's answer matches the reality, and not necessarily matching the example, reducing the bias of the assessment system. Then, a language model makes a decision and outputs two components: the acceptance/rejection decision, and its justification, which gives the user of the dataset an insight on what can be addressed in the next iterations of their solution.
+           The goal of the automatic assessment is to evaluate the responses from an answering system with respect to the actual state of the corresponding scene in the dataset. We divided the assessment into two cases: <i>Ground Truth Check</i> - when the ground truth is indisputable (e.g. number of objects in the room), <i>Answer Cross-check</i> - when the definition of the ground truth would either need to exceed context length or would unnecessarily limit the answering system's creativity (e.g. finding similarities between rooms). In both scenarios, an LLM is provided with the question, the system's answer, and the acceptance criterion, which varies based on the question type. In the case of the <i>Ground Truth Check</i>, the message to the LLM is extended with information on the actual state of the scene with respect to the given question. <i>Answer Cross-check</i>, however, provides an image presenting the corresponding scene(s) in question, accompanied by an example answer. This way, a VLM can decide whether the actual system's answer matches the reality, and not necessarily matching the example, reducing the bias of the assessment system.
           </p>
 
         </div>
     <centering>
       <div style="text-align: center;">
         <img id="pipeline" style="max-width: 100%;" src="static/images/assessment.png">
+        <p><i><b>Automatic assessment procedure.</b> The left chart presents the scenario of Ground Truth Check, the right one depicts Answer Cross-Check, used respectively for indisputable data and more creative answers.</i></p>
       </div>
     </centering>
-  
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">RAG3D-Chat</h2>
+        <div class="content has-text-justified">
+          <p>
+            To generate answers for the assessment system to evaluate, we propose RAG3D-Chat, a spatial Q&A system based on two main components: Semantic Kernel (SK) and Retrieval Augmented Generation (RAG) within Llama Index framework. Semantic Kernel, being an open-source framework for LLM-based implementation of agents, allowed for integrating four complementary modules - each with different applications and limitations - into one system. Once the modules were implemented and described with a corresponding prompt, Semantic Kernel's planner was able to propose a chain of function calls, whose result would be an answer to the input question.
+          </p>
+        </div>
+      </div>
+    </div>
+    <centering>
+      <div style="text-align: center;">
+        <img id="pipeline" style="max-width: 100%;" src="static/images/rag3d_chat.png">
+        <p><i><b>Overview of RAG3D-Chat.</b> Based on the received question, the Semantic Kernel library orchestrates the calls of four different modules having different specializations and types of input.</i></p>
+      </div>
+    </centering>
+    <br><br>
+    <centering>
+      <div style="text-align: center;">
+        <img id="pipeline" style="max-width: 80%;" src="static/images/sk_result.png">
+        <p><i><b>Example of modules chained together by the planner.</b> Semantic Kernel's planner divides the user question into subtasks and calls the modules in a sequence to finally formulate a response based on the retrieved information.</i></p>
+      </div>
+    </centering>
   </div>
 </section>
 
