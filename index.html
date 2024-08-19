@@ -244,6 +244,40 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <p> <b>Evaluation of the Automatic Assessment</b><br>
+            To ensure that the automatic assessment correctly accepts or rejects the answers, we conducted a user study. We exposed 60 people to a random sample of 40 questions drawn from a 100-questions scene, asking them to assess the correctness of the system's answers. Additionally, 10 abstracted questions were added to get an insight on people's reasoning in case of ambiguous answers. The automatic assessment agreed with the majority of participants' responses in 39 out of 40 cases, reaching the absolute agreement rate of 97.5%. The detailed results of the user study can be found in a <a href="">separate webpage</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <centering>
+      <div style="text-align: center;">
+        <img id="pipeline" style="max-width: 100%;" src="static/images/user_study_results.png">
+        <p><i><b>Results of the user study.</b> The chart presents the agreement of the participants of the survey with the system. The users agree with the answering system agrees on 97.5% of cases, with a weighted agreement score of 86.4%.</i></p>
+      </div>
+    </centering>
+    <br><br>
+    <div class="content has-text-justified">
+      <p>
+       <b>Baseline Results</b><br>
+       RAG3D-Chat achieves an accuracy of 66.8% on the 1000 questions of the proposed dataset. The system correctly addresses most of the questions in each category. Predictions pose the biggest challenge for the system, accounting for 76 failed cases.
+      </p>
+    </div>
+    <centering>
+      <div style="text-align: center;">
+        <img id="pipeline" style="max-width: 60%;" src="static/images/baseline_result.png">
+        <p><i><b>Results of the baseline on each category of questions.</b> Although the highest percentage of correct answers belongs to navigation-related questions, it is the location category with the highest number of correct responses because of the larger number of questions in this group.</i></p>
+      </div>
+    </centering>
+  </div>
+</section>
+
 
 <!-- Image carousel
 <section class="hero is-small">
