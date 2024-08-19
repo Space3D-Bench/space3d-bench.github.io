@@ -20,11 +20,11 @@
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="Spatial Q&A Benchmark, Retrieval-Augmented Generation, Vision Language Model">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>Space3D-Bench</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,21 +52,23 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Space3D-Bench: Spatial 3D Question Answering Benchmark</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://emilia-szymanska.gitlab.io/cv/" target="_blank">Emilia Szymanska</a><sup>1,2</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://dusmanu.com/" target="_blank">Mihai Dusmanu</a><sup>2</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="https://radmahdi.github.io/" target="_blank">Mahdi Rad</a><sup>2</sup>,</span>
+                  </span>
+                  <span class="author-block">
+                    <a href="https://people.inf.ethz.ch/pomarc/" target="_blank">Marc Pollefeys</a><sup>1,2</sup>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block"><sup>1</sup>ETH Zurich, <sup>2</sup>Microsoft Spatial AI Lab<br><strong>ECCV 2024 Workshop</strong></span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -82,20 +84,11 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
+                    
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/Space3D-Bench/Space3D-Bench" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -105,7 +98,7 @@
                 </span>
 
                 <!-- ArXiv abstract Link -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -113,7 +106,19 @@
                   </span>
                   <span>arXiv</span>
                 </a>
+              </span> -->
+
+                <!-- Supplementary PDF link -->
+                <span class="link-block">
+                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-link"></i>
+                  </span>
+                  <span>User study results</span>
+                </a>
               </span>
+
             </div>
           </div>
         </div>
@@ -127,13 +132,15 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
+      <img src="static/images/space3d-bench.png" alt="MY ALT TEXT"/>
+      
+      <!-- Your video here
       <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
-      </video>
+      </video> -->
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        <strong>Questions from Space3D-Bench with answers by RAG3D-Chat</strong>. The dataset supports a variety of spatial tasks, including <span style="color: teal; font-weight: bold;">object location</span>, <span style="color: rgb(151, 67, 151); font-weight: bold;">measurements</span>, <span style="color: rgb(52, 209, 209); font-weight: bold;">pattern identification</span>, <span style="color: orange; font-weight: bold;">navigation</span>, <span style="color: blue; font-weight: bold;">spatial relationships</span>, and <span style="color: red; font-weight: bold;">predictions</span>.
       </h2>
     </div>
   </div>
@@ -148,7 +155,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Answering questions about the spatial properties of the environment poses challenges for existing language and vision foundation models due to a lack of understanding of the 3D world notably in terms of relationships between objects. To push the field forward, multiple 3D Q&A datasets were proposed which, overall, provide a variety of questions, but  they individually focus on particular aspects of 3D reasoning or are limited in terms of data modalities. To address this, we present <strong>Space3D-Bench</strong> - a collection of 1000 general spatial questions and answers related to scenes of the Replica dataset which offers a variety of data modalities: point clouds, posed RGB-D images, navigation meshes and 3D object detections. To ensure that the questions cover a wide range of 3D objectives, we propose an indoor spatial questions taxonomy inspired by geographic information systems and use it to balance the dataset accordingly. Moreover, we provide an assessment system that grades natural language responses based on predefined ground-truth answers by leveraging a Vision Language Model's comprehension of both text and images to compare the responses with ground-truth textual information or relevant visual data. Finally, we introduce a baseline called <strong>RAG3D-Chat</strong> integrating the world understanding of foundation models with rich context retrieval, achieving an accuracy of 67% on the proposed dataset.
           </p>
         </div>
       </div>
@@ -158,34 +165,82 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Benchmark</h2>
+        <div class="content has-text-justified">
+          <p>
+           <b>Dataset.</b> This Q&A dataset is based on thirteen scenes part of the Replica dataset: five multi-room scenes - a 2-floor house <i>(apartment 0)</i>, two multi-room apartments <i>(apartment 1, 2)</i>, two different setups of the FRL apartment <i>(FRL apartment 0, 1)</i>; and eight single-room scenes - three apartment rooms <i>(room 0, 1, 2)</i>, a hotel room <i>(hotel 0)</i>, and four office rooms <i>(office 0, 2, 3, 4)</i>. We manually constructed 1000 questions with answers: 100 for all multi-room scenes, 60 for apartment rooms and two offices, and 50 for the remaining two offices. The answers may have one of the two forms: ground truth information for factual data, such as the number of objects in a room, or an illustrative image of the objects/rooms of interest for questions that involve descriptions or identifying similarities. This distinction allows to not penalize the answering system's creativity.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center;">
+      <div style="display: flex; justify-content: center; gap: 10px;">
+        <div>
+          <img src="static/images/sunburst.png" alt="Image 1" style="max-width: 70%;">
+          <p><i>a) Question distribution based on their first three words</i></p>
+        </div>
+        <div>
+          <img src="static/images/question_distribution.png" alt="Image 2" style="max-width: 67%;">
+          <p><i>b) Question distribution based on their categories</i></p>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+        <div>
+          <img src="static/images/question_lengths.png" alt="Image 3" style="max-width: 90%;">
+          <p><i>c) Question distribution based on their lengths</i></p>
+        </div>
+      </div>
+      <br>
+      <p><i><b>Statistics of questions in the dataset.</b> The dataset has a large variety of phrasings (a) and is well distributed across the question categories (b). Furthermore, the questions are overall concise with an average length of around 8 words, but some longer ones are also present (c).</i></p>
+    </div>
+    <br><br>
+        <div class="content has-text-justified">
+          <p>
+           <b>Automatic assessment</b>
+            (a) The distribution of instructions based on the first word, where the inner circle of the graph represents the frequency of the first word’s occurrence, and the outer circle shows the frequency of verbs and nouns appearing in the instructions corresponding to that first word. 
+            (b) The word cloud of responses. 
+            (c) The distribution of instruction length. (d) The distribution of response length
+          </p>
+
+        </div>
+    <centering>
+      <div style="text-align: center;">
+        <img id="pipeline" style="max-width: 100%;" src="static/images/statistics.png">
+      </div>
+    </centering>
+  
+  </div>
+</section>
+
+
+<!-- Image carousel
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
-        <!-- Your image here -->
         <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           First image description.
         </h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
         <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
           Second image description.
         </h2>
       </div>
       <div class="item">
-        <!-- Your image here -->
         <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
          Third image description.
        </h2>
      </div>
      <div class="item">
-      <!-- Your image here -->
       <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
         Fourth image description.
@@ -195,22 +250,18 @@
 </div>
 </div>
 </section>
-<!-- End image carousel -->
+End image carousel -->
 
 
-
-
-<!-- Youtube video -->
+<!-- Youtube video
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <!-- Youtube embed code here -->
             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
@@ -218,10 +269,10 @@
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+End youtube video -->
 
 
-<!-- Video carousel -->
+<!-- Video carousel
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
@@ -229,21 +280,18 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
           <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
             <source src="static/videos/carousel1.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video2">
           <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
             <source src="static/videos/carousel2.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video3">
           <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
             <source src="static/videos/carousel3.mp4"
             type="video/mp4">
           </video>
@@ -252,14 +300,10 @@
     </div>
   </div>
 </section>
-<!-- End video carousel -->
+End video carousel -->
 
 
-
-
-
-
-<!-- Paper poster -->
+<!-- Paper poster
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
@@ -271,7 +315,7 @@
       </div>
     </div>
   </section>
-<!--End paper poster -->
+End paper poster -->
 
 
 <!--BibTex citation -->
@@ -283,6 +327,15 @@
 </section>
 <!--End BibTex citation -->
 
+<!--Acknowledgements -->
+<section class="section" id="Acknowledgements">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgements</h2>
+    We thank all the participants of the user study for their time and effort. Special appreciation goes to our collaborators from Microsoft, the ETH CVG lab, and those who joined us through the authors' social media channels. 
+  </div>
+</section>
+<!--End Acknowledgements -->
+
 
   <footer class="footer">
   <div class="container">
@@ -292,7 +345,7 @@
 
           <p>
             This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
 
