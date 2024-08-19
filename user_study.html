@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Spatial Q&A Benchmark, Retrieval-Augmented Generation, Vision Language Model">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Space3D-Bench</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Space3D-Bench: Spatial 3D Question Answering Benchmark</h1>
+                <!-- Supplementary PDF link -->
+                <span class="link-block">
+                  <a href="index.html" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-backward"></i>
+                  </span>
+                  <span>Back to main page</span>
+                </a>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Detailed User Study Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>Dataset</b><br>
+            This Q&A dataset is based on thirteen scenes part of the <a href="https://github.com/facebookresearch/Replica-Dataset">Replica dataset</a>: five multi-room scenes - a 2-floor house <i>(apartment 0)</i>, two multi-room apartments <i>(apartment 1, 2)</i>, two different setups of the FRL apartment <i>(FRL apartment 0, 1)</i>; and eight single-room scenes - three apartment rooms <i>(room 0, 1, 2)</i>, a hotel room <i>(hotel 0)</i>, and four office rooms <i>(office 0, 2, 3, 4)</i>. We manually constructed 1000 questions with answers: 100 for all multi-room scenes, 60 for apartment rooms and two offices, and 50 for the remaining two offices. The answers may have one of the two forms: ground truth information for factual data, such as the number of objects in a room, or an illustrative image of the objects/rooms of interest for questions that involve descriptions or identifying similarities. This distinction allows to not penalize the answering system's creativity. The questions were divided into 6 categories, adjusted for indoor spaces from the <a href="https://proceedings.esri.com/library/userconf/proc18/tech-workshops/tw_1593-380.pdf">spatial taxonomy for GIS applications</a>: object location, measurements, pattern identification, navigation, spatial relationships, and predictions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <centering>
+      <div style="text-align: center;">
+        <img id="pipeline" style="max-width: 100%;" src="static/images/assessment.png">
+        <p><i><b>Automatic assessment procedure.</b> The left chart presents the scenario of Ground Truth Check, the right one depicts Answer Cross-Check, used respectively for indisputable data and more creative answers.</i></p>
+      </div>
+    </centering>
+  </div>
+</section>
+
+
+<!--Acknowledgements -->
+<section class="section" id="Acknowledgements">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgements</h2>
+    We thank all the participants of the user study for their time and effort. Special appreciation goes to our collaborators from Microsoft, the ETH CVG lab, and those who joined us through the authors' social media channels. 
+  </div>
+</section>
+<!--End Acknowledgements -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
