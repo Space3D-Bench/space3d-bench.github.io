@@ -54,8 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
       questionDiv.classList.add('columns', 'is-vcentered');
   
       // Set background color based on evaluation response
-      const backgroundColor = item.evaluationResponse === 'Yes' ? '#FFB6C1' : '#ADD8E6'; // Green for Yes, Red for No
-      questionDiv.style.backgroundColor = backgroundColor;
+      const backgroundColor = item.evaluationResponse === 'Yes' ? '#FFB6C1' : '#ADD8E6'; // Light pink for Yes, Light blue for No
   
       let additionalContent = '';
       if (item.type === 'groundTruth') {
@@ -66,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
       const questionContent = `
         <div class="column is-three-quarters">
-          <h3><b>${item.question}</b></h3>
+          <h3><b><span style="background-color: ${backgroundColor}; padding: 2px;">${item.question}</span></b></h3>
           <p><b>Answer:</b> ${item.answer}</p>
           ${additionalContent}
           <p><b>Evaluation Response:</b> ${item.evaluationResponse}</p>
