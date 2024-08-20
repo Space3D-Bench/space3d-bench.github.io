@@ -413,7 +413,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (item.type === 'groundTruth') {
           additionalContent = `<p class="justified"><b>Ground Truth:</b> ${item.groundTruth}</p><p><b>Automatic Assessment Decision:</b> ${item.evaluationResponse}</p>`;
         } else if (item.type === 'answerCrossCheck') {
-          additionalContent = `<p class="justified"><b>Example Answer:</b> ${item.example}</p><p><b>Automatic Assessment Decision:</b> ${item.evaluationResponse}</p><img src="${item.imagePath}" alt="Example Answer Image" style="height: 200px; width: auto; margin-top: 10px;">`;
+          additionalContent = `<p class="justified"><b>Example Answer:</b> ${item.example}</p><p><b>Automatic Assessment Decision:</b> ${item.evaluationResponse}</p><img class="centered-image" src="${item.imagePath}" alt="Example Answer Image" style="height: 200px; width: auto; margin-top: 10px;">`;
         }
     
         const questionContent = `

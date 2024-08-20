@@ -5,6 +5,13 @@ body {
 .justified {
   text-align: justify;
 }
+
+.centered-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .footer .icon-link {
     font-size: 25px;
     color: #000;
