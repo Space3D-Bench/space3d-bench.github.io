@@ -6,6 +6,12 @@ body {
   text-align: justify;
 }
 
+.separator {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 20px 0;
+}
+
 .centered-image {
   display: block;
   margin-left: auto;

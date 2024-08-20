@@ -402,34 +402,44 @@ document.addEventListener('DOMContentLoaded', function() {
   
     // Generate HTML for each question and chart
     const container = document.getElementById('questions-container');
+    // Add a separator at the beginning
+    const initialSeparator = document.createElement('div');
+    initialSeparator.classList.add('separator');
+    container.appendChild(initialSeparator);
+    
     questionsData.forEach((item, index) => {
         const questionDiv = document.createElement('div');
         questionDiv.classList.add('columns', 'is-vcentered');
-    
+
         // Set emoji based on evaluation response
         const emoji = item.agreement === 'yes' ? '✅' : '❌'; // Tick for Yes, Cross for No
-    
+
         let additionalContent = '';
         if (item.type === 'groundTruth') {
-          additionalContent = `<p class="justified"><b>Ground Truth:</b> ${item.groundTruth}</p><p><b>Automatic Assessment Decision:</b> ${item.evaluationResponse}</p>`;
+            additionalContent = `<p class="justified"><b>Ground Truth:</b> ${item.groundTruth}</p><p><b>Automatic Assessment Decision:</b> ${item.evaluationResponse}</p>`;
         } else if (item.type === 'answerCrossCheck') {
-          additionalContent = `<p class="justified"><b>Example Answer:</b> ${item.example}</p><p><b>Automatic Assessment Decision:</b> ${item.evaluationResponse}</p><img class="centered-image" src="${item.imagePath}" alt="Example Answer Image" style="height: 200px; width: auto; margin-top: 10px;">`;
+            additionalContent = `<p class="justified"><b>Example Answer:</b> ${item.example}</p><p><b>Automatic Assessment Decision:</b> ${item.evaluationResponse}</p><img class="centered-image" src="${item.imagePath}" alt="Example Answer Image" style="height: 200px; width: auto; margin-top: 10px;">`;
         }
-    
+
         const questionContent = `
-          <div class="column is-three-quarters">
-            <h3><b>${emoji} ${item.question}</b></h3>
-            <p class="justified"><b>System's Answer:</b> ${item.answer}</p>
-            ${additionalContent}
-          </div>
-          <div class="column is-one-quarter">
-            <canvas id="pieChart${index}" width="200" height="150"></canvas>
-          </div>
+            <div class="column is-three-quarters">
+                <h3><b>${emoji} ${item.question}</b></h3>
+                <p class="justified"><b>System's Answer:</b> ${item.answer}</p>
+                ${additionalContent}
+            </div>
+            <div class="column is-one-quarter">
+                <canvas id="pieChart${index}" width="200" height="150"></canvas>
+            </div>
         `;
-    
+
         questionDiv.innerHTML = questionContent;
         container.appendChild(questionDiv);
-    
+
+        // Add a separator
+        const separator = document.createElement('div');
+        separator.classList.add('separator');
+        container.appendChild(separator);
+
         // Create the pie chart
         const ctx = document.getElementById(`pieChart${index}`).getContext('2d');
         createPieChart(ctx, item.chartData);
