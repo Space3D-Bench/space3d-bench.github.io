@@ -30,8 +30,14 @@ document.addEventListener('DOMContentLoaded', function() {
         options: {
           responsive: false,
           maintainAspectRatio: false,
-          legend: {
-            position: 'right' // Position the legend to the right of the chart
+          plugins: {
+            legend: {
+              position: 'right', // Position the legend to the right of the chart
+              labels: {
+                boxWidth: 10,
+                padding: 20
+              }
+            }
           }
         }
       });
@@ -50,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <p><b>Ground Truth:</b> ${item.groundTruth}</p>
         </div>
         <div class="column is-one-quarter">
-          <canvas id="pieChart${index}" width="150" height="150"></canvas>
+          <canvas id="pieChart${index}" width="200" height="200"></canvas>
         </div>
       `;
   
