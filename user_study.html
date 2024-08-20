@@ -39,6 +39,7 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script src="static/js/piecharts.js"></script> 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -71,25 +72,18 @@
           <h2 class="title is-3">Detailed User Study Results</h2>
           <div class="content has-text-justified">
             <p>
-              <b>Dataset</b><br>
-              This Q&A dataset is based on thirteen scenes part of the <a href="https://github.com/facebookresearch/Replica-Dataset">Replica dataset</a>: five multi-room scenes - a 2-floor house <i>(apartment 0)</i>, two multi-room apartments <i>(apartment 1, 2)</i>, two different setups of the FRL apartment <i>(FRL apartment 0, 1)</i>; and eight single-room scenes - three apartment rooms <i>(room 0, 1, 2)</i>, a hotel room <i>(hotel 0)</i>, and four office rooms <i>(office 0, 2, 3, 4)</i>. We manually constructed 1000 questions with answers: 100 for all multi-room scenes, 60 for apartment rooms and two offices, and 50 for the remaining two offices. The answers may have one of the two forms: ground truth information for factual data, such as the number of objects in a room, or an illustrative image of the objects/rooms of interest for questions that involve descriptions or identifying similarities. This distinction allows to not penalize the answering system's creativity. The questions were divided into 6 categories, adjusted for indoor spaces from the <a href="https://proceedings.esri.com/library/userconf/proc18/tech-workshops/tw_1593-380.pdf">spatial taxonomy for GIS applications</a>: object location, measurements, pattern identification, navigation, spatial relationships, and predictions.
+              <b>40 Main Questions</b><br>
+              This Q&A dataset is based on thirteen scenes part of the Replica dataset.
             </p>
           </div>
         </div>
       </div>
-      <div style="text-align: center;">
-        <img id="pipeline" style="max-width: 100%;" src="static/images/assessment.png">
-        <p><i><b>Automatic assessment procedure.</b> The left chart presents the scenario of Ground Truth Check, the right one depicts Answer Cross-Check, used respectively for indisputable data and more creative answers.</i></p>
-      </div>
+      <!-- <div style="text-align: center;">
+        <img id="pipeline" style="max-width: 100%;" src="static/images/tmp.png">
+        <p><i><b>Automatic assessment procedure.</b> The left chart presents the scenario of Ground Truth Check</i></p>
+      </div>-->
       <!-- Add canvas elements for pie charts -->
-      <div>
-        <h3>Question 1</h3>
-        <canvas id="pieChart1"></canvas>
-      </div>
-      <div>
-        <h3>Question 2</h3>
-        <canvas id="pieChart2"></canvas>
-      </div>
+      <div id="questions-container"></div>
       <!-- Add more questions and canvas elements as needed -->
     </div>
   </section>
@@ -98,7 +92,7 @@
   <section class="section" id="Acknowledgements">
     <div class="container is-max-desktop content">
       <h2 class="title">Acknowledgements</h2>
-      We thank all the participants of the user study for their time and effort. Special appreciation goes to our collaborators from Microsoft, the ETH CVG lab, and those who joined us through the authors' social media channels. 
+      We thank all the participants of the user study for their time and effort. Special appreciation goes to our colleagues from Microsoft, the ETH CVG lab, and those who joined us through the authors' social media channels. 
     </div>
   </section>
   <!-- End Acknowledgements -->
@@ -122,41 +116,5 @@
   <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
   <!-- End of Statcounter Code -->
 
-  <script>
-    // Data for each question
-    const data = {
-      question1: [60, 40], // Example data for Question 1
-      question2: [70, 30], // Example data for Question 2
-      // Add more data for other questions
-    };
-
-    // Function to create a pie chart
-    function createPieChart(ctx, data) {
-      new Chart(ctx, {
-        type: 'pie',
-        data: {
-          datasets: [{
-            data: data,
-            backgroundColor: ['#FF6384', '#36A2EB'],
-          }],
-          labels: ['Part 1', 'Part 2']
-        },
-        options: {
-          responsive: false,
-          maintainAspectRatio: false,
-        }
-      });
-    }
-
-    // Get the context of the canvas elements
-    const ctx1 = document.getElementById('pieChart1').getContext('2d');
-    const ctx2 = document.getElementById('pieChart2').getContext('2d');
-    // Add more contexts as needed
-
-    // Create pie charts
-    createPieChart(ctx1, data.question1);
-    createPieChart(ctx2, data.question2);
-    // Add more pie charts as needed
-  </script>
 </body>
 </html>
