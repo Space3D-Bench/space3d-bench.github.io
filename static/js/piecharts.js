@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
         question: "Q17. What are the similarities between the dining room and the bedroom?",
         answer: "I'm sorry, but I was unable to find the similarities between the dining room and the bedroom because the information about the dining room is not available.",
         example: "Both have artworks on the walls, windows with blinds, large-area rug.",
-        imagePath: "static/images/carousel1.jpg",
+        imagePath: "static/images/user_study/q17.png",
         chartData: [3, 57],
         evaluationResponse: 'Incorrect',
         agreement: "yes"
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
         question: "Q19. What can a person sitting in an armchair in the bedroom see in front of them?",
         answer: "From the perspective of a person sitting in the armchair in the bedroom, they would be facing a wall with two framed pictures hanging above a small table or shelf, which has a decorative vase or plant on it. The wall appears to be the foot of the room, and the floor is covered with a large area rug. The edge of a bed can be seen to one side, suggesting that the armchair is positioned near the corner of the bedroom. The overall color scheme is neutral, with light walls and furnishings, creating a calm and minimalist atmosphere.",
         example: "You can see a bed with cushions on it, a window, two nightstands with lamps on the opposite sides of the bed, rug on the floor, open door leading to another room.",
-        imagePath: "static/images/carousel1.jpg",
+        imagePath: "static/images/user_study/q19.png",
         chartData: [16,44],
         evaluationResponse: 'Incorrect',
         agreement: "yes"
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
         question: "Q20. What can a person sitting on the sofa see in front of them?",
         answer: "In the image, the sofa is positioned between two lamps that are placed on identical side tables. Directly above the sofa, there is a large framed artwork hanging on the wall. To the side of the sofa, there is a window with blinds partially drawn, allowing some natural light into the room. In front of the sofa, there is a small round coffee table with a few items on it, which appears to be closer to the viewer than the sofa. The room has a neutral color scheme with white walls and a light-colored floor, creating a bright and airy atmosphere.",
         example: "You can see a coffee table with books, a plant and a decorative item right in front of you. On the opposite wall you can see a hanged painting, and a table with vases, boxes and white flowers beneath the it. To the right you could see a basket on the floow, to the left an open door leading to another room.",
-        imagePath: "static/images/carousel1.jpg",
+        imagePath: "static/images/user_study/q20.png",
         chartData: [13,47],
         evaluationResponse: 'Incorrect',
         agreement: "yes"
@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', function() {
         question: "Q28. How is the couch in the living room placed with respect to the surrounding objects?",
         answer: "The couch in the living room is centrally positioned against a wall, beneath a large framed artwork. Directly in front of the couch is a small, round coffee table. Flanking the couch on both sides are matching table lamps, each placed on a small table or stand. There is a window with blinds to one side of the couch, providing natural light to the space. The overall arrangement creates a symmetrical and balanced setup in the room.",
         example: "The couch has small tables with lamps on both its sides, its back against the wall, under a painting. The couch is facing a coffee table with a book, vase and a plant, and in the further side of the room a table with decorative items on it. It is flanked by armchairs on both its sides, and it holds some cushions.",
-        imagePath: "static/images/carousel1.jpg",
+        imagePath: "static/images/user_study/q28.png",
         chartData: [57,3],
         evaluationResponse: 'Correct',
         agreement: "yes"
@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function() {
         question: "Q29. How is the sofa in the living room placed with respect to the surrounding objects?",
         answer: "The sofa is centrally placed within the room, facing towards a large artwork that hangs on the wall. There is a coffee table positioned directly in front of the sofa, with a small decorative item on top. Flanking the sofa are two matching table lamps, each placed on a surface that appears to be either a side table or a console, which are not fully visible in the image. Behind the sofa, there is a window with blinds partially drawn, allowing some natural light into the room. The overall arrangement suggests a conversational or lounge area designed for relaxation or socializing.",
         example: "The sofa has small tables with lamps on both its sides, its back against the wall, under a painting. The sofa is facing a coffee table with a book, vase and a plant, and in the further side of the room a table with decorative items on it. It is flanked by armchairs on both its sides, and it holds some cushions.",
-        imagePath: "static/images/carousel1.jpg",
+        imagePath: "static/images/user_study/q29.png",
         chartData: [36, 24],
         evaluationResponse: 'Correct',
         agreement: "yes"
@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', function() {
         question: "Q30. What is placed on top of the table in the dining room?",
         answer: "A delicate, tiered centerpiece featuring what seems to be a pair of ornamental dishes or shallow bowls, possibly made of glass or ceramic, with a design that complements the minimalist aesthetic of the room is placed on top of the table in the dining room.",
         example: "There is a tiered serving tray.",
-        imagePath: "static/images/carousel1.jpg",
+        imagePath: "static/images/user_study/q30.png",
         chartData: [50, 10],
         evaluationResponse: 'Correct',
         agreement: "yes"
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
         question: "Q31. What objects are there on the desk in the study?",
         answer: "There is a small potted plant on the desk in the study.",
         example: "There is a lamp and a potted plant. (Assume that the object on the left on the desk is a desk lamp)",
-        imagePath: "static/images/carousel1.jpg",
+        imagePath: "static/images/user_study/q31.png",
         chartData: [16, 44],
         evaluationResponse: 'Incorrect',
         agreement: "yes"
@@ -301,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function() {
         question: "Q33. In the dining room, how are the chairs positioned with respect to each other?",
         answer: "In the dining room, there is a round dining table with chairs positioned around it. The chairs are evenly spaced, encircling the table, and all are oriented to face towards the center of the table. There is no clear head of the table due to its round shape, which suggests a more collaborative or egalitarian seating arrangement. The chairs are close enough to the table to be used for dining but also have enough space to be pulled out for sitting. A decorative centerpiece is placed in the middle of the table, and the chairs appear to be upholstered, suggesting a comfortable seating arrangement.",
         example: "The chairs surround the central round table from all sides.",
-        imagePath: "static/images/carousel1.jpg",
+        imagePath: "static/images/user_study/q33.png",
         chartData: [52, 8],
         evaluationResponse: 'Correct',
         agreement: "yes"
@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', function() {
         question: "Q37. What kind of activities is the largest room best suited for?",
         answer: "The largest room in the apartment is the corridor. It contains a lamp and a vent. The corridor has a modern and functional aesthetic with a neutral color palette and clean lines. Given its size and the objects present, the corridor is best suited for movement and transit within the apartment. It may also serve as a good place for standing conversations, quick catch-ups, or even as a space for pets to roam, if any. However, it might not be suitable for activities that require furniture or specific equipment, such as dining, working, or entertainment.",
         example: "The corridor is the largest room. In there, you could do any indoor activity that requires empty space e.g. yoga, dancing.",
-        imagePath: "static/images/carousel1.jpg",
+        imagePath: "static/images/user_study/q37.png",
         chartData: [48, 12],
         evaluationResponse: 'Correct',
         agreement: "yes"
@@ -413,7 +413,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (item.type === 'groundTruth') {
           additionalContent = `<p class="justified"><b>Ground Truth:</b> ${item.groundTruth}</p><p><b>Automatic Assessment Decision:</b> ${item.evaluationResponse}</p>`;
         } else if (item.type === 'answerCrossCheck') {
-          additionalContent = `<p class="justified"><b>Example Answer:</b> ${item.example}</p><p><b>Automatic Assessment Decision:</b> ${item.evaluationResponse}</p><img src="${item.imagePath}" alt="Example Answer Image" style="height: 150px; width: auto; margin-top: 10px;">`;
+          additionalContent = `<p class="justified"><b>Example Answer:</b> ${item.example}</p><p><b>Automatic Assessment Decision:</b> ${item.evaluationResponse}</p><img src="${item.imagePath}" alt="Example Answer Image" style="height: 200px; width: auto; margin-top: 10px;">`;
         }
     
         const questionContent = `
@@ -423,7 +423,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ${additionalContent}
           </div>
           <div class="column is-one-quarter">
-            <canvas id="pieChart${index}" width="200" height="200"></canvas>
+            <canvas id="pieChart${index}" width="200" height="150"></canvas>
           </div>
         `;
     
