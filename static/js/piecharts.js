@@ -406,7 +406,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const initialSeparator = document.createElement('div');
     initialSeparator.classList.add('separator');
     container.appendChild(initialSeparator);
-    
+
     questionsData.forEach((item, index) => {
         const questionDiv = document.createElement('div');
         questionDiv.classList.add('columns', 'is-vcentered');
@@ -427,7 +427,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <p class="justified"><b>System's Answer:</b> ${item.answer}</p>
                 ${additionalContent}
             </div>
-            <div class="column is-one-quarter">
+            <div class="column is-one-quarter-flex">
                 <canvas id="pieChart${index}" width="200" height="150"></canvas>
             </div>
         `;

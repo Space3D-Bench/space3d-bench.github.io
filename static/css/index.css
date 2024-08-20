@@ -12,6 +12,12 @@ body {
   margin: 20px 0;
 }
 
+.column.is-one-quarter-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .centered-image {
   display: block;
   margin-left: auto;
