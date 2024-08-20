@@ -79,10 +79,11 @@
           </div>
         </div>
       </div>
-      <!-- Toggle button to switch between user studies -->
+      <!-- Buttons to switch between user studies -->
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <button id="toggleButton" class="button is-normal is-rounded is-dark">Switch to User Study 2</button>
+          <button id="userStudy1Button" class="button is-normal is-rounded is-dark">40 evaluation questions</button>
+          <button id="userStudy2Button" class="button is-normal is-rounded is-light">10 abstracted questions</button>
         </div>
       </div>
       <!-- User Study 1 Results -->
@@ -123,24 +124,48 @@
   <!-- Statcounter tracking code -->
   <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
   <!-- End of Statcounter Code -->
-
+  <style>
+    .button.is-dark:disabled {
+      background-color: #363636;
+      color: white;
+      border-color: #363636;
+      opacity: 1;
+    }
+  </style>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const toggleButton = document.getElementById('toggleButton');
+      const userStudy1Button = document.getElementById('userStudy1Button');
+      const userStudy2Button = document.getElementById('userStudy2Button');
       const userStudy1 = document.getElementById('userStudy1');
       const userStudy2 = document.getElementById('userStudy2');
-
-      toggleButton.addEventListener('click', function() {
-        if (userStudy1.style.display === 'none') {
-          userStudy1.style.display = 'block';
-          userStudy2.style.display = 'none';
-          toggleButton.textContent = 'Switch to User Study 2';
-        } else {
-          userStudy1.style.display = 'none';
-          userStudy2.style.display = 'block';
-          toggleButton.textContent = 'Switch to User Study 1';
-        }
-      });
+  
+      function switchToUserStudy1() {
+        userStudy1.style.display = 'block';
+        userStudy2.style.display = 'none';
+        userStudy1Button.disabled = true;
+        userStudy2Button.disabled = false;
+        userStudy1Button.classList.add('is-dark');
+        userStudy1Button.classList.remove('is-light');
+        userStudy2Button.classList.add('is-light');
+        userStudy2Button.classList.remove('is-dark');
+      }
+  
+      function switchToUserStudy2() {
+        userStudy1.style.display = 'none';
+        userStudy2.style.display = 'block';
+        userStudy1Button.disabled = false;
+        userStudy2Button.disabled = true;
+        userStudy1Button.classList.add('is-light');
+        userStudy1Button.classList.remove('is-dark');
+        userStudy2Button.classList.add('is-dark');
+        userStudy2Button.classList.remove('is-light');
+      }
+  
+      userStudy1Button.addEventListener('click', switchToUserStudy1);
+      userStudy2Button.addEventListener('click', switchToUserStudy2);
+  
+      // Initialize with User Study 1 visible
+      switchToUserStudy1();
     });
   </script>
 

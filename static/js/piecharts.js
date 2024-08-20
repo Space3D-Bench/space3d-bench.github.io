@@ -389,7 +389,7 @@ document.addEventListener('DOMContentLoaded', function() {
           maintainAspectRatio: false,
           plugins: {
             legend: {
-              position: 'right', // Position the legend to the right of the chart
+              position: 'top', // Position the legend to the right of the chart
               labels: {
                 boxWidth: 10,
                 padding: 20
