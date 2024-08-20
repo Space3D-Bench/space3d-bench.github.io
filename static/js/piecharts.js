@@ -6,14 +6,16 @@ document.addEventListener('DOMContentLoaded', function() {
         question: "Q1. What object in the living room is closest to the sofa?",
         answer: "The object in the living room that is closest to the sofa is a cushion.",
         groundTruth: "In the living room, a cushion is closest to the sofa.",
-        chartData: [60, 40]
+        chartData: [60, 40],
+        evaluationResponse: 'Yes'
       },
       {
         type: 'answerCrossCheck',
         question: "Question 2",
         answer: "Answer 2",
         imagePath: "static/images/carousel1.jpg",
-        chartData: [70, 30]
+        chartData: [70, 30],
+        evaluationResponse: 'No'
       },
       // Add more questions as needed
     ];
@@ -48,32 +50,37 @@ document.addEventListener('DOMContentLoaded', function() {
     // Generate HTML for each question and chart
     const container = document.getElementById('questions-container');
     questionsData.forEach((item, index) => {
-    const questionDiv = document.createElement('div');
-    questionDiv.classList.add('columns', 'is-vcentered');
-
-    let additionalContent = '';
-    if (item.type === 'groundTruth') {
+      const questionDiv = document.createElement('div');
+      questionDiv.classList.add('columns', 'is-vcentered');
+  
+      // Set background color based on evaluation response
+      const backgroundColor = item.evaluationResponse === 'Yes' ? '#FFB6C1' : '#ADD8E6'; // Green for Yes, Red for No
+      questionDiv.style.backgroundColor = backgroundColor;
+  
+      let additionalContent = '';
+      if (item.type === 'groundTruth') {
         additionalContent = `<p><b>Ground Truth:</b> ${item.groundTruth}</p>`;
-    } else if (item.type === 'answerCrossCheck') {
-        additionalContent = `<p><b>Example Answer:</b> ${item.answer}</p><img src="${item.imagePath}" alt="Example Answer Image" style="height: 250px; width: auto; margin-top: 10px;">`;
-    }
-
-    const questionContent = `
+      } else if (item.type === 'answerCrossCheck') {
+        additionalContent = `<p><b>Example Answer:</b> ${item.answer}</p><img src="${item.imagePath}" alt="Example Answer Image" style="height: 150px; width: auto; margin-top: 10px;">`;
+      }
+  
+      const questionContent = `
         <div class="column is-three-quarters">
-        <h3><b>${item.question}</b></h3>
-        <p><b>Answer:</b> ${item.answer}</p>
-        ${additionalContent}
+          <h3><b>${item.question}</b></h3>
+          <p><b>Answer:</b> ${item.answer}</p>
+          ${additionalContent}
+          <p><b>Evaluation Response:</b> ${item.evaluationResponse}</p>
         </div>
         <div class="column is-one-quarter">
-        <canvas id="pieChart${index}" width="200" height="200"></canvas>
+          <canvas id="pieChart${index}" width="200" height="200"></canvas>
         </div>
-    `;
-
-    questionDiv.innerHTML = questionContent;
-    container.appendChild(questionDiv);
-
-    // Create the pie chart
-    const ctx = document.getElementById(`pieChart${index}`).getContext('2d');
-    createPieChart(ctx, item.chartData);
+      `;
+  
+      questionDiv.innerHTML = questionContent;
+      container.appendChild(questionDiv);
+  
+      // Create the pie chart
+      const ctx = document.getElementById(`pieChart${index}`).getContext('2d');
+      createPieChart(ctx, item.chartData);
     });
   });
