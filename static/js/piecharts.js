@@ -50,36 +50,36 @@ document.addEventListener('DOMContentLoaded', function() {
     // Generate HTML for each question and chart
     const container = document.getElementById('questions-container');
     questionsData.forEach((item, index) => {
-      const questionDiv = document.createElement('div');
-      questionDiv.classList.add('columns', 'is-vcentered');
-  
-      // Set background color based on evaluation response
-      const backgroundColor = item.evaluationResponse === 'Yes' ? '#FFB6C1' : '#ADD8E6'; // Light pink for Yes, Light blue for No
-  
-      let additionalContent = '';
-      if (item.type === 'groundTruth') {
-        additionalContent = `<p><b>Ground Truth:</b> ${item.groundTruth}</p>`;
-      } else if (item.type === 'answerCrossCheck') {
-        additionalContent = `<p><b>Example Answer:</b> ${item.answer}</p><img src="${item.imagePath}" alt="Example Answer Image" style="height: 150px; width: auto; margin-top: 10px;">`;
-      }
-  
-      const questionContent = `
-        <div class="column is-three-quarters">
-          <h3><b><span style="background-color: ${backgroundColor}; padding: 2px;">${item.question}</span></b></h3>
-          <p><b>Answer:</b> ${item.answer}</p>
-          ${additionalContent}
-          <p><b>Evaluation Response:</b> ${item.evaluationResponse}</p>
-        </div>
-        <div class="column is-one-quarter">
-          <canvas id="pieChart${index}" width="200" height="200"></canvas>
-        </div>
-      `;
-  
-      questionDiv.innerHTML = questionContent;
-      container.appendChild(questionDiv);
-  
-      // Create the pie chart
-      const ctx = document.getElementById(`pieChart${index}`).getContext('2d');
-      createPieChart(ctx, item.chartData);
+        const questionDiv = document.createElement('div');
+        questionDiv.classList.add('columns', 'is-vcentered');
+    
+        // Set emoji based on evaluation response
+        const emoji = item.evaluationResponse === 'Yes' ? '✅' : '❌'; // Tick for Yes, Cross for No
+    
+        let additionalContent = '';
+        if (item.type === 'groundTruth') {
+          additionalContent = `<p><b>Ground Truth:</b> ${item.groundTruth}</p>`;
+        } else if (item.type === 'answerCrossCheck') {
+          additionalContent = `<p><b>Example Answer:</b> ${item.answer}</p><img src="${item.imagePath}" alt="Example Answer Image" style="height: 150px; width: auto; margin-top: 10px;">`;
+        }
+    
+        const questionContent = `
+          <div class="column is-three-quarters">
+            <h3><b>${item.question} ${emoji}</b></h3>
+            <p><b>Answer:</b> ${item.answer}</p>
+            ${additionalContent}
+            <p><b>Evaluation Response:</b> ${item.evaluationResponse}</p>
+          </div>
+          <div class="column is-one-quarter">
+            <canvas id="pieChart${index}" width="200" height="200"></canvas>
+          </div>
+        `;
+    
+        questionDiv.innerHTML = questionContent;
+        container.appendChild(questionDiv);
+    
+        // Create the pie chart
+        const ctx = document.getElementById(`pieChart${index}`).getContext('2d');
+        createPieChart(ctx, item.chartData);
     });
   });
