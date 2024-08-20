@@ -411,15 +411,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
         let additionalContent = '';
         if (item.type === 'groundTruth') {
-          additionalContent = `<p><b>Ground Truth:</b> ${item.groundTruth}</p><p><b>Automatic Assessment Decision:</b> ${item.evaluationResponse}</p>`;
+          additionalContent = `<p class="justified"><b>Ground Truth:</b> ${item.groundTruth}</p><p><b>Automatic Assessment Decision:</b> ${item.evaluationResponse}</p>`;
         } else if (item.type === 'answerCrossCheck') {
-          additionalContent = `<p><b>Example Answer:</b> ${item.example}</p><p><b>Automatic Assessment Decision:</b> ${item.evaluationResponse}</p><img src="${item.imagePath}" alt="Example Answer Image" style="height: 150px; width: auto; margin-top: 10px;">`;
+          additionalContent = `<p class="justified"><b>Example Answer:</b> ${item.example}</p><p><b>Automatic Assessment Decision:</b> ${item.evaluationResponse}</p><img src="${item.imagePath}" alt="Example Answer Image" style="height: 150px; width: auto; margin-top: 10px;">`;
         }
     
         const questionContent = `
           <div class="column is-three-quarters">
-            <h3><b>${item.question} ${emoji}</b></h3>
-            <p><b>System's Answer:</b> ${item.answer}</p>
+            <h3><b>${emoji} ${item.question}</b></h3>
+            <p class="justified"><b>System's Answer:</b> ${item.answer}</p>
             ${additionalContent}
           </div>
           <div class="column is-one-quarter">
