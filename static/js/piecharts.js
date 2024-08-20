@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Data for each question
-    const questionsData = [
+    const questionsData1 = [
       {
         type: 'groundTruth',
         question: "Q1. What object in the living room is closest to the sofa?",
@@ -400,48 +400,53 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   
-    // Generate HTML for each question and chart
-    const container = document.getElementById('questions-container');
-    // Add a separator at the beginning
-    const initialSeparator = document.createElement('div');
-    initialSeparator.classList.add('separator');
-    container.appendChild(initialSeparator);
+    function generateQuestions(containerId, questionsData) {
+        const container = document.getElementById(containerId);
 
-    questionsData.forEach((item, index) => {
-        const questionDiv = document.createElement('div');
-        questionDiv.classList.add('columns', 'is-vcentered');
+        // Add a separator at the beginning
+        const initialSeparator = document.createElement('div');
+        initialSeparator.classList.add('separator');
+        container.appendChild(initialSeparator);
 
-        // Set emoji based on evaluation response
-        const emoji = item.agreement === 'yes' ? '✅' : '❌'; // Tick for Yes, Cross for No
+        questionsData.forEach((item, index) => {
+            const questionDiv = document.createElement('div');
+            questionDiv.classList.add('columns', 'is-vcentered');
 
-        let additionalContent = '';
-        if (item.type === 'groundTruth') {
-            additionalContent = `<p class="justified"><b>Ground Truth:</b> ${item.groundTruth}</p><p><b>Automatic Assessment Decision:</b> ${item.evaluationResponse}</p>`;
-        } else if (item.type === 'answerCrossCheck') {
-            additionalContent = `<p class="justified"><b>Example Answer:</b> ${item.example}</p><p><b>Automatic Assessment Decision:</b> ${item.evaluationResponse}</p><img class="centered-image" src="${item.imagePath}" alt="Example Answer Image" style="height: 200px; width: auto; margin-top: 10px;">`;
-        }
+            // Set emoji based on evaluation response
+            const emoji = item.agreement === 'yes' ? '✅' : '❌'; // Tick for Yes, Cross for No
 
-        const questionContent = `
-            <div class="column is-three-quarters">
-                <h3><b>${emoji} ${item.question}</b></h3>
-                <p class="justified"><b>System's Answer:</b> ${item.answer}</p>
-                ${additionalContent}
-            </div>
-            <div class="column is-one-quarter-flex">
-                <canvas id="pieChart${index}" width="200" height="150"></canvas>
-            </div>
-        `;
+            let additionalContent = '';
+            if (item.type === 'groundTruth') {
+                additionalContent = `<p class="justified"><b>Ground Truth:</b> ${item.groundTruth}</p><p><b>Automatic Assessment Decision:</b> ${item.evaluationResponse}</p>`;
+            } else if (item.type === 'answerCrossCheck') {
+                additionalContent = `<p class="justified"><b>Example Answer:</b> ${item.example}</p><p><b>Automatic Assessment Decision:</b> ${item.evaluationResponse}</p><img class="centered-image" src="${item.imagePath}" alt="Example Answer Image" style="height: 200px; width: auto; margin-top: 10px;">`;
+            }
 
-        questionDiv.innerHTML = questionContent;
-        container.appendChild(questionDiv);
+            const questionContent = `
+                <div class="column is-three-quarters">
+                    <h3><b>${emoji} ${item.question}</b></h3>
+                    <p class="justified"><b>System's Answer:</b> ${item.answer}</p>
+                    ${additionalContent}
+                </div>
+                <div class="column is-one-quarter">
+                    <canvas id="pieChart${containerId}${index}" width="200" height="150"></canvas>
+                </div>
+            `;
 
-        // Add a separator
-        const separator = document.createElement('div');
-        separator.classList.add('separator');
-        container.appendChild(separator);
+            questionDiv.innerHTML = questionContent;
+            container.appendChild(questionDiv);
 
-        // Create the pie chart
-        const ctx = document.getElementById(`pieChart${index}`).getContext('2d');
-        createPieChart(ctx, item.chartData);
-    });
+            // Add a separator
+            const separator = document.createElement('div');
+            separator.classList.add('separator');
+            container.appendChild(separator);
+
+            // Create the pie chart
+            const ctx = document.getElementById(`pieChart${containerId}${index}`).getContext('2d');
+            createPieChart(ctx, item.chartData);
+        });
+    }
+
+    // Generate questions for User Study 1
+    generateQuestions('questions-container', questionsData1);
   });

@@ -40,6 +40,7 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
   <script src="static/js/piecharts.js"></script> 
+  <script src="static/js/abstracted_user_study.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -78,13 +79,20 @@
           </div>
         </div>
       </div>
-      <!-- <div style="text-align: center;">
-        <img id="pipeline" style="max-width: 100%;" src="static/images/tmp.png">
-        <p><i><b>Automatic assessment procedure.</b> The left chart presents the scenario of Ground Truth Check</i></p>
-      </div>-->
-      <!-- Add canvas elements for pie charts -->
-      <div id="questions-container"></div>
-      <!-- Add more questions and canvas elements as needed -->
+      <!-- Toggle button to switch between user studies -->
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <button id="toggleButton" class="button is-normal is-rounded is-dark">Switch to User Study 2</button>
+        </div>
+      </div>
+      <!-- User Study 1 Results -->
+      <div id="userStudy1" class="user-study">
+        <div id="questions-container"></div>
+      </div>
+      <!-- User Study 2 Results -->
+      <div id="userStudy2" class="user-study" style="display: none;">
+        <div id="questions-container-2"></div>
+      </div>
     </div>
   </section>
 
@@ -115,6 +123,26 @@
   <!-- Statcounter tracking code -->
   <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
   <!-- End of Statcounter Code -->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggleButton = document.getElementById('toggleButton');
+      const userStudy1 = document.getElementById('userStudy1');
+      const userStudy2 = document.getElementById('userStudy2');
+
+      toggleButton.addEventListener('click', function() {
+        if (userStudy1.style.display === 'none') {
+          userStudy1.style.display = 'block';
+          userStudy2.style.display = 'none';
+          toggleButton.textContent = 'Switch to User Study 2';
+        } else {
+          userStudy1.style.display = 'none';
+          userStudy2.style.display = 'block';
+          toggleButton.textContent = 'Switch to User Study 1';
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
