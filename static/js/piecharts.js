@@ -380,7 +380,7 @@ document.addEventListener('DOMContentLoaded', function() {
         data: {
           datasets: [{
             data: data,
-            backgroundColor: ['#FF6384', '#36A2EB'],
+            backgroundColor: ['#FF7F00', '#36A2EB'],
           }],
           labels: ['Correct', 'Incorrect']
         },

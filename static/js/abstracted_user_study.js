@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
             data: {
                 datasets: [{
                     data: data,
-                    backgroundColor: ['#FF7F00', '#008000'], // Vivid Orange and Green
+                    backgroundColor: ['#79029B', '#FFDA03'], // Vivid Orange and Green
                 }],
                 labels: labels
             },
