@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Spatial Q&A Benchmark, Retrieval-Augmented Generation, Vision Language Model">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Space3D-Bench</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="static/js/piecharts.js"></script> 
+  <script src="static/js/abstracted_user_study.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Space3D-Bench: Spatial 3D Question Answering Benchmark</h1>
+            <!-- Supplementary PDF link -->
+            <span class="link-block">
+              <a href="index.html" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fas fa-backward"></i>
+                </span>
+                <span>Back to main page</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Detailed User Study Results</h2>
+          <div class="content has-text-justified">
+            <p>
+              Sixty participants took part in the user study, which was divided into two major sections: <br><br>
+              <b>40 evaluation questions</b><br>
+              This part consisted of 40 questions drawn randomly from 100-questions scene. Participants were presented with a question, response from the answering system, and the ground truth information <b>or</b> an image of the relevant scene followed by an example answer (being only a suggestion). In each case, participants were asked to decide whether they accept the system's answer as correct or not. <br>
+              Piecharts corresponding to each question present the distribution of the responses from participants. We additionally state the decision from the automatic assessment system, whose correctness we aimed to evaluate through the user study. The icons next to the questions (✅ and ❌) indicate whether the automatic assessment system matched the decision of the majority of participants.<br>
+
+              Additional conditions participants were provided with:
+              <ul>
+                <li>the tolerance for the navigable distance was 0.5m, for straight-line distance 0.2m, and for specific coordinates 0.1m;</li>
+                <li>in the case of the questions on viewpoints, the provided images presented the viewpoint of a person described in the question.</li>
+              </ul>
+              <br>
+              <b>10 abstracted questions</b><br>
+              We additionally wanted to draw conclusions on how to address ambiguities. We abstracted 10 questions and asked them to the participants. We believe the divided opinions on some of the cases give a valuable insight on the ambiguities of natural language answers assessment. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Buttons to switch between user studies -->
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <button id="userStudy1Button" class="button is-normal is-rounded is-dark">40 evaluation questions</button>
+          <button id="userStudy2Button" class="button is-normal is-rounded is-light">10 abstracted questions</button>
+        </div>
+      </div>
+      <!-- User Study 1 Results -->
+      <div id="userStudy1" class="user-study">
+        <div id="questions-container"></div>
+      </div>
+      <!-- User Study 2 Results -->
+      <div id="userStudy2" class="user-study" style="display: none;">
+        <div id="questions-container-2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Acknowledgements -->
+  <section class="section" id="Acknowledgements">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Acknowledgements</h2>
+      We thank all the participants of the user study for their time and effort. Special appreciation goes to our colleagues from Microsoft, the ETH CVG lab, and those who joined us through the authors' social media channels. 
+    </div>
+  </section>
+  <!-- End Acknowledgements -->
+
+  <footer class="footer">
+    <div class="container" ></div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <!-- End of Statcounter Code -->
+  <style>
+    .button.is-dark:disabled {
+      background-color: #363636;
+      color: white;
+      border-color: #363636;
+      opacity: 1;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const userStudy1Button = document.getElementById('userStudy1Button');
+      const userStudy2Button = document.getElementById('userStudy2Button');
+      const userStudy1 = document.getElementById('userStudy1');
+      const userStudy2 = document.getElementById('userStudy2');
+  
+      function switchToUserStudy1() {
+        userStudy1.style.display = 'block';
+        userStudy2.style.display = 'none';
+        userStudy1Button.disabled = true;
+        userStudy2Button.disabled = false;
+        userStudy1Button.classList.add('is-dark');
+        userStudy1Button.classList.remove('is-light');
+        userStudy2Button.classList.add('is-light');
+        userStudy2Button.classList.remove('is-dark');
+      }
+  
+      function switchToUserStudy2() {
+        userStudy1.style.display = 'none';
+        userStudy2.style.display = 'block';
+        userStudy1Button.disabled = false;
+        userStudy2Button.disabled = true;
+        userStudy1Button.classList.add('is-light');
+        userStudy1Button.classList.remove('is-dark');
+        userStudy2Button.classList.add('is-dark');
+        userStudy2Button.classList.remove('is-light');
+      }
+  
+      userStudy1Button.addEventListener('click', switchToUserStudy1);
+      userStudy2Button.addEventListener('click', switchToUserStudy2);
+  
+      // Initialize with User Study 1 visible
+      switchToUserStudy1();
+    });
+  </script>
+
+</body>
+</html>

@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <meta property="og:url" content="URL OF THE WEBSITE" />
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
 
   <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
@@ -20,21 +21,19 @@
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="Spatial Q&A Benchmark, Retrieval-Augmented Generation, Vision Language Model">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>Space3D-Bench</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -44,6 +43,7 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 </head>
+
 <body>
 
 
@@ -52,50 +52,59 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Space3D-Bench: Spatial 3D Question Answering Benchmark</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+                <a href="https://emilia-szymanska.gitlab.io/cv/" target="_blank">Emilia
+                  Szymanska</a><sup>1*</sup>,</span>
+              <span class="author-block">
+                <a href="https://dusmanu.com/" target="_blank">Mihai Dusmanu</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://jwbuurlage.github.io/" target="_blank">Jan-Willem Buurlage</a><sup>2</sup>,</span>
+              </span>
+              <span class="author-block">
+                <a href="https://radmahdi.github.io/" target="_blank">Mahdi Rad</a><sup>2</sup>,</span>
+              </span>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+              <span class="author-block">
+                <a href="https://people.inf.ethz.ch/pomarc/" target="_blank">Marc Pollefeys</a><sup>1,2</sup>
+              </span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>ETH Zurich, <sup>2</sup>Microsoft Spatial AI Lab, Zurich<br>
+                <sup>*</sup> <small><i>Work done at Microsoft Spatial AI Lab for a Master thesis.</i></small><br>
+                <strong>ECCV 2024 OpenSun3D Workshop</strong></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark" disabled>
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
                     </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark" disabled>
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
 
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/Space3D-Bench/Space3D-Bench" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -104,209 +113,294 @@
                   </a>
                 </span>
 
-                <!-- ArXiv abstract Link -->
+
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                  <a href="user_study.html" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-link"></i>
+                    </span>
+                    <span>User study results</span>
+                  </a>
+                </span>
+
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/space3d-bench.png" alt="MY ALT TEXT" />
+
+        <!-- Your video here
       <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+      </video> -->
         <h2 class="subtitle has-text-centered">
-          First image description.
+          <strong>Questions from Space3D-Bench with answers by RAG3D-Chat</strong>. The dataset supports a variety of
+          spatial tasks, including <span style="color: teal; font-weight: bold;">object location</span>, <span
+            style="color: rgb(151, 67, 151); font-weight: bold;">measurements</span>, <span
+            style="color: rgb(52, 209, 209); font-weight: bold;">pattern identification</span>, <span
+            style="color: orange; font-weight: bold;">navigation</span>, <span
+            style="color: blue; font-weight: bold;">spatial relationships</span>, and <span
+            style="color: red; font-weight: bold;">predictions</span>.
         </h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+  </section>
+  <!-- End teaser video -->
 
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Answering questions about the spatial properties of the environment poses challenges for existing language
+              and vision foundation models due to a lack of understanding of the 3D world notably in terms of
+              relationships between objects. To push the field forward, multiple 3D Q&A datasets were proposed which,
+              overall, provide a variety of questions, but they individually focus on particular aspects of 3D reasoning
+              or are limited in terms of data modalities. To address this, we present <strong>Space3D-Bench</strong> - a
+              collection of 1000 general spatial questions and answers related to scenes of the Replica dataset which
+              offers a variety of data modalities: point clouds, posed RGB-D images, navigation meshes and 3D object
+              detections. To ensure that the questions cover a wide range of 3D objectives, we propose an indoor spatial
+              questions taxonomy inspired by geographic information systems and use it to balance the dataset
+              accordingly. Moreover, we provide an assessment system that grades natural language responses based on
+              predefined ground-truth answers by leveraging a Vision Language Model's comprehension of both text and
+              images to compare the responses with ground-truth textual information or relevant visual data. Finally, we
+              introduce a baseline called <strong>RAG3D-Chat</strong> integrating the world understanding of foundation
+              models with rich context retrieval, achieving an accuracy of 67% on the proposed dataset.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
+  </section>
+  <!-- End paper abstract -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Benchmark</h2>
+          <div class="content has-text-justified">
+            <p>
+              <b>Dataset</b><br>
+              This Q&A dataset is based on thirteen scenes part of the <a
+                href="https://github.com/facebookresearch/Replica-Dataset">Replica dataset</a>: five multi-room scenes -
+              a 2-floor house <i>(apartment 0)</i>, two multi-room apartments <i>(apartment 1, 2)</i>, two different
+              setups of the FRL apartment <i>(FRL apartment 0, 1)</i>; and eight single-room scenes - three apartment
+              rooms <i>(room 0, 1, 2)</i>, a hotel room <i>(hotel 0)</i>, and four office rooms <i>(office 0, 2, 3,
+                4)</i>. We manually constructed 1000 questions with answers: 100 for all multi-room scenes, 60 for
+              apartment rooms and two offices, and 50 for the remaining two offices. The answers may have one of the two
+              forms: ground truth information for factual data, such as the number of objects in a room, or an
+              illustrative image of the objects/rooms of interest for questions that involve descriptions or identifying
+              similarities. This distinction allows to not penalize the answering system's creativity. The questions
+              were divided into 6 categories, adjusted for indoor spaces from the <a
+                href="https://proceedings.esri.com/library/userconf/proc18/tech-workshops/tw_1593-380.pdf">spatial
+                taxonomy for GIS applications</a>: object location, measurements, pattern identification, navigation,
+              spatial relationships, and predictions.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+      <div style="text-align: center;">
+        <div style="display: flex; justify-content: center; gap: 10px;">
+          <div>
+            <img src="static/images/sunburst.png" alt="Sunburst chart" style="max-width: 70%;">
+            <p><i>a) Question distribution based on their first three words</i></p>
+          </div>
+          <div>
+            <img src="static/images/question_distribution.png" alt="Distribution of questions wrt categories"
+              style="max-width: 84%;">
+            <p><i>b) Question distribution based on their categories</i></p>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+          <div>
+            <img src="static/images/question_lengths.png" alt="Question distribution wrt lengths"
+              style="max-width: 90%;">
+            <p><i>c) Question distribution based on their lengths</i></p>
+          </div>
+        </div>
+        <br>
+        <p><i><b>Statistics of questions in the dataset.</b> The dataset has a large variety of phrasings (a) and is
+            well distributed across the question categories (b). Furthermore, the questions are overall concise with an
+            average length of around 8 words, but some longer ones are also present (c).</i></p>
       </div>
+      <br><br>
+      <div class="content has-text-justified">
+        <p>
+          <b>Automatic assessment</b><br>
+          The goal of the automatic assessment is to evaluate the responses from an answering system with respect to the
+          actual state of the corresponding scene in the dataset. We divided the assessment into two cases: <i>Ground
+            Truth Check</i> - when the ground truth is indisputable (e.g. number of objects in the room), <i>Answer
+            Cross-check</i> - when the definition of the ground truth would either need to exceed context length or
+          would unnecessarily limit the answering system's creativity (e.g. finding similarities between rooms). In both
+          scenarios, an LLM is provided with the question, the system's answer, and the acceptance criterion, which
+          varies based on the question type. In the case of the <i>Ground Truth Check</i>, the message to the LLM is
+          extended with information on the actual state of the scene with respect to the given question. <i>Answer
+            Cross-check</i>, however, provides an image presenting the corresponding scene(s) in question, accompanied
+          by an example answer. This way, a VLM can decide whether the actual system's answer matches the reality, and
+          not necessarily matching the example, reducing the bias of the assessment system.
+        </p>
+
+      </div>
+      <centering>
+        <div style="text-align: center;">
+          <img id="pipeline" style="max-width: 100%;" src="static/images/assessment.png">
+          <p><i><b>Automatic assessment procedure.</b> The left chart presents the scenario of Ground Truth Check, the
+              right one depicts Answer Cross-Check, used respectively for indisputable data and more creative
+              answers.</i></p>
+        </div>
+      </centering>
     </div>
   </section>
-<!--End paper poster -->
 
 
-<!--BibTex citation -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">RAG3D-Chat</h2>
+          <div class="content has-text-justified">
+            <p>
+              To generate answers for the assessment system to evaluate, we propose RAG3D-Chat, a spatial Q&A system
+              based on two main components: Semantic Kernel (SK) and Retrieval Augmented Generation (RAG) within Llama
+              Index framework. Semantic Kernel, being an open-source framework for LLM-based implementation of agents,
+              allowed for integrating four complementary modules - each with different applications and limitations -
+              into one system. Once the modules were implemented and described with a corresponding prompt, Semantic
+              Kernel's planner was able to propose a chain of function calls, whose result would be an answer to the
+              input question.
+            </p>
+          </div>
+        </div>
+      </div>
+      <centering>
+        <div style="text-align: center;">
+          <img id="pipeline" style="max-width: 100%;" src="static/images/rag3d_chat.png">
+          <p><i><b>Overview of RAG3D-Chat.</b> Based on the received question, the Semantic Kernel library orchestrates
+              the calls of four different modules having different specializations and types of input.</i></p>
+        </div>
+      </centering>
+      <br><br>
+      <centering>
+        <div style="text-align: center;">
+          <img id="pipeline" style="max-width: 80%;" src="static/images/sk_result.png">
+          <p><i><b>Example of modules chained together by the planner.</b> Semantic Kernel's planner divides the user
+              question into subtasks and calls the modules in a sequence to finally formulate a response based on the
+              retrieved information.</i></p>
+        </div>
+      </centering>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Results</h2>
+          <div class="content has-text-justified">
+            <p> <b>Evaluation of the Automatic Assessment</b><br>
+              To ensure that the automatic assessment correctly accepts or rejects the answers, we conducted a user
+              study. We exposed 60 people to a random sample of 40 questions drawn from a 100-questions scene, asking
+              them to assess the correctness of the system's answers. Additionally, 10 abstracted questions were added
+              to get an insight on people's reasoning in case of ambiguous answers. The automatic assessment agreed with
+              the majority of participants' responses in 39 out of 40 cases, reaching the absolute agreement rate of
+              97.5%. The detailed results of the user study can be found in a <a href="user_study.html">separate
+                webpage</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <centering>
+        <div style="text-align: center;">
+          <img id="pipeline" style="max-width: 100%;" src="static/images/user_study_results.png">
+          <p><i><b>Results of the user study.</b> The chart presents the agreement of the participants of the survey
+              with the system. The users agree with the answering system agrees on 97.5% of cases, with a weighted
+              agreement score of 86.4%.</i></p>
+        </div>
+      </centering>
+      <br><br>
+      <div class="content has-text-justified">
+        <p>
+          <b>Baseline Results</b><br>
+          RAG3D-Chat achieves an accuracy of 66.8% on the 1000 questions of the proposed dataset. The system correctly
+          addresses most of the questions in each category. Predictions pose the biggest challenge for the system,
+          accounting for 76 failed cases.
+        </p>
+      </div>
+      <centering>
+        <div style="text-align: center;">
+          <img id="pipeline" style="max-width: 60%;" src="static/images/baseline_result.png">
+          <p><i><b>Results of the baseline on each category of questions.</b> Although the highest percentage of correct
+              answers belongs to navigation-related questions, it is the location category with the highest number of
+              correct responses because of the larger number of questions in this group.</i></p>
+        </div>
+      </centering>
+    </div>
+  </section>
+
+
+
+
+  <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>
+@inproceedings{szymanska2024space3dbench,
+  title={{Space3D-Bench: Spatial 3D Question Answering Benchmark}},
+  author={Szymanska, Emilia and Dusmanu, Mihai and Buurlage, Jan-Willem and Rad, Mahdi and Pollefeys, Marc},
+  booktitle={European Conference on Computer Vision (ECCV) Workshops},
+  year={2024}
+}</code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
+  </section>
+  <!--End BibTex citation -->
+
+  <!--Acknowledgements -->
+  <section class="section" id="Acknowledgements">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Acknowledgements</h2>
+      We thank all the participants of the user study for their time and effort. Special appreciation goes to our
+      colleagues from Microsoft, the ETH CVG lab, and those who joined us through the authors' social media channels.
+    </div>
+  </section>
+  <!--End Acknowledgements -->
 
 
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
 
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+</body>
 
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</html>
